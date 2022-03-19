@@ -1,0 +1,17 @@
+# Makefile for lab6 server/client program
+
+CC = gcc
+OBJCSS = server_client6.c
+
+CFLAGS = -g -Wall -lm
+
+#setup for system
+nLIBS = 
+
+all: client6
+
+client6: $(OBJCSS)
+	$(CC) $(CFLAGS) -o $@ $(OBJCSS) $(LIBS)
+
+clean:
+	rm client6
